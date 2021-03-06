@@ -12,6 +12,14 @@
     padding: 30px 50px;
     margin-top: 5vh;
 }
+#newEntry {
+    font-size: 1.2em;
+    border-radius: 5px;
+}
+
+button {
+    font-size: 1.2em;
+}
 
 #myTasks {
     width: 60%;
