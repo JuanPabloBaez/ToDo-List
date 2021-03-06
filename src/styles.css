@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.taskAdder {
+    width: 60%;
+    margin: 0 auto;
+    background-color: darkgoldenrod;
+    opacity: 40%;
+    padding: 30px 50px;
+    margin-top: 5vh;
+}
+
+#myTasks {
+    width: 60%;
+    height: 300px;
+    margin: 5vh auto;
+    background-color:lightskyblue;
+    opacity: 40%;
+    padding: 30px 50px;
+   
+}

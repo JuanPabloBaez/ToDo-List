@@ -3,21 +3,23 @@
     <head>
         <meta charset="utf-8"">
         <title>To Do List</title>
+        <link href="src/styles.css" rel="stylesheet">
+       
 
     </head>
     <body>
 
         <div class="container">
             <form class="taskAdder">
-                <input type="text" name="task" placeholder="Task Item">
-                <button type="submit">Add</button>
+                <input id="newEntry" type="text" name="task" placeholder="Task Item" required>
+                <button type="submit" onclick="addNewTodo()" >Add</button>
             </form>
         
-              <ul class="myTasks">
+            <ul id="myTasks" class="list"> 
         
             </ul>
         </div>
 
-        
+        <script src="src/script.js" defer></script>
     </body>
 </html>
