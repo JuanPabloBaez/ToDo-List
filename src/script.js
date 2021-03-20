@@ -13,7 +13,7 @@ form.addEventListener('submit', (event)=>{
     newInput.value = '';
 })
 function addNewTodo(event)  {
-    let template = `<li class="todo-item"><p contenteditable>${newInput.value}</p> 
+    let template = `<li class="todo-item"><input type="checkbox" id="horns"> <p class="inputText" contenteditable>${newInput.value}</p> 
     <div class="itemButtons"> <img class="editIcon" src="src/images/iconedit.svg"> 
     <img class="closeIcon" src="src/images/iconDelete.svg"></div></li>`; 
     listEl.innerHTML += template;
@@ -30,8 +30,10 @@ listEl.addEventListener('click', (event) =>{
 })
 
      // Edit Items
-const editTask = () => {
-    
+
+const editTask = (event) => {
+const editText = document.getElementById("inputText")
+
 }
 
 
