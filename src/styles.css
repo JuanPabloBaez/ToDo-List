@@ -7,20 +7,25 @@
 
 
 .taskAdder {
-    margin: 0 10%;
-    padding: 10px 25px;
+    margin: 2% auto;
+    padding: 10px 15px;
     height: 25vh;
-    max-width: 1200px;
+    width: 90%;
+    max-width: 800px;
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     overflow: hidden;
+    border: 1px solid white;
+    border-radius: 6px;
+    justify-content: center;
+
 }
 
 h1 {
     
     color: white;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    margin-top: 5%;å 
+    margin-top: 5%;
     font-size: 5vh;
     
 }
@@ -31,13 +36,14 @@ h1 {
     border: none;
     background: none;
     border-bottom: 1px solid white;
-    margin-bottom: 10px;
+    margin: 10px;
+    width: 80%;
     
 }
 #submitEl {
-    margin-bottom: 20px;
-    width: 25%;
+    width: 20%;
     height: 5hv;
+    margin-bottom: 5px;
 }
 
 
@@ -56,40 +62,52 @@ button {
     background-color: rgb(0, 0, 0);
     display: flex;
     padding: 10px 10%;
-    justify-content: space-between;
+    justify-content: space-around;
+    
 }
 
 
 #myTasks {
-    padding: 50px 10%;
-    
+    padding: 20px;
     background-color: black;
-    padding: 30px 50px;
-    height: 70vh; 
+    min-height: 70vh; 
     font-family: Arial, Helvetica, sans-serif; 
 }
-.todo-item {
-    border: 1px solid white;
-    color: white;
-    font-size: 1.2em;
-    padding: 3px;
-    margin: 15px auto;
-    border-radius: 6px;
+
+#myTasks li {
     display: flex;
-    justify-content: space-between;
-    align-items: center;            
-}
-.todo-item p { 
-    float: left;
+    border: 1px solid white;
+    border-radius: 6px;
+    justify-content:left;
+    align-items: center;
+    max-width: 800px;
+    margin: 20px auto;
 }
 
-.itemButtons img {
+input[type=checkbox] {
+    margin: 0 10px;
+}
+
+.todo-item {
+    margin: 5px 10px;
+    color: white;
+    font-size: 1.2em; 
+    padding: 3px;
+    
+}
+.completed {
+    text-decoration: line-through;
+    font-style: italic;
+}
+
+.closeIcon {
     cursor: pointer; 
     padding: 8px;
     opacity: 0.5;
     filter: invert(75%);
+    margin: 0 10px 0 auto;
 }
-.itemButtons img:hover {
+.closeIcon:hover {
     background-color: rgba(242, 242, 242, 0.5);
     color: hsl(0, 0%, 100%);
     height: 100%;
@@ -113,7 +131,7 @@ button {
 .background {
     position: absolute;
     width: 100%;
-    height: inherit;
+    height: 100%;
     top: 0;
     left: 0;
     background: #1d3844;
