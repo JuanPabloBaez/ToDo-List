@@ -4,7 +4,9 @@
     box-sizing: border-box;
 }
 
-
+body {
+    background-color: black;
+}
 
 .taskAdder {
     margin: 2% auto;
