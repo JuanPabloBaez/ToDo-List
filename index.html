@@ -5,6 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>To Do List</title>
         <link href="src/styles.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&family=Poiret+One&family=Press+Start+2P&family=Space+Mono&display=swap" rel="stylesheet">
        
 
     </head>
@@ -14,7 +16,7 @@
 
         <div class="container">
             <form id="formList" class="taskAdder">
-                <h1>Don't forget to:</h1>
+                <h1>Don't forget to..<span id="susp">.</span></h1>
                 <input id="newEntry" type="text" name="task" placeholder="List Item" required>
                 <button id="submitEl" type="submit" >Add</button>                 
                 <div class="background">
