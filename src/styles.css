@@ -25,8 +25,7 @@ h1 {
     
     color: white;
     font-family: 'Space Mono', monospace;
-    margin-top: 5%;
-    font-size: 5vh;    
+    font-size: 4.5vh;    
 }
 #susp {
     animation-name: blink;
