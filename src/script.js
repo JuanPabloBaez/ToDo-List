@@ -2,7 +2,8 @@
 const newInput = document.querySelector('#newEntry');
 const form = document.querySelector(".taskAdder");
 const listEl = document.getElementById('myTasks');
-const clearEl = document.querySelector('#clearAll'); 
+const clearEl = document.querySelector('#clearAll');
+const completList = document.querySelector('#completList'); 
 let todos = JSON.parse(localStorage.getItem('items')) || [];
 render();
 
@@ -18,19 +19,17 @@ const addNewTodo = () => {
   const newTodo = {
     id: (Date.now() + Math.random()).toString(),
     title: newInput.value,
-    //isEditable: true,
     isDone: false
   }
   todos.push(newTodo);
   save()
   render();
-  
 }
 function render() {
   clearElements();
   todos.forEach ((todo) => {
     const template = `
-    <li data-id = ${todo.id}>
+    <li class="listItem" data-id = ${todo.id}>
         <input type='checkbox' ${todo.isDone ? "checked" : null} />
         <p class=' ${todo.isDone ?  "todo-item completed" : "todo-item"}' id='itemText' contenteditable='${!todo.isDone}'>${todo.title}
       </p>
@@ -42,7 +41,6 @@ function render() {
 function clearElements() {
   listEl.innerHTML = "";}
   
-
 
     
 listEl.addEventListener('click', (event) =>{
@@ -70,7 +68,6 @@ listEl.addEventListener('click', (event) =>{
       }
           //completed items 
       if (clickedEl.tagName.toLowerCase() === 'input') {
-        //let checkEl = clickedEl;
         let checkId = clickedEl.parentElement.dataset.id;
         const checkedItem = todos.find((todo) => checkId === todo.id);
         console.log(checkedItem)
@@ -97,12 +94,26 @@ const eraseTodo = (clickedEl) => {
   render(); 
 }
 clearEl.addEventListener('click', () =>{   
-    //listEl.innerHTML = '';
     todos.length = 0;
     save();
    render();   
-})
-  
+}) 
 function save() {
   localStorage.setItem('items', JSON.stringify(todos)); 
 }
+
+          // Filter Elements
+completList.addEventListener('click', () =>{
+
+const completEl = document.getElementsByClassName("completed");
+
+console.log(completEl)
+
+if (completEl.style.display === "block") {
+  completEl.parentElement.style.display = "none";
+} else {
+  completEl.style.display = "block";
+}
+
+//document.querySelectorAll('.listItem .completed').classList.toggle("completed");
+})
